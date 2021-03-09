@@ -28,7 +28,7 @@ public class ProductJob {
 
     //    @Scheduled(cron = "0 0 0 * * *", zone = "UTC")
     @Scheduled(initialDelay = 5000, fixedDelay = 120000)
-    public void reportCurrentTime() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
+    public void execute() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
 
         log.info("The time is now {}", LocalDateTime.now());
 
